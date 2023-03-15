@@ -1,0 +1,27 @@
+{
+    "api": "0.0",
+    "auth": "zef:pelevesque",
+    "authors": [
+        "Pierre-Emmanuel Lévesque <pierre.e.levesque@gmail.com>"
+    ],
+    "build-depends": [
+    ],
+    "depends": [
+    ],
+    "description": "A collection of Raku utilities to assist musical composition.",
+    "license": "MIT",
+    "name": "Composition::Utils",
+    "provides": {
+        "Composition::Utils": "lib/Composition/Utils.rakumod"
+    },
+    "raku": "6.*",
+    "source-url": "git://github.com/pelevesque/Composition-Utils.git",
+    "tags": [
+        "music",
+        "composition"
+    ],
+    "test-depends": [
+        "Test::Selector"
+    ],
+    "version": "0.0.0"
+}
