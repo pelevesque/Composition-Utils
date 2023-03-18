@@ -5,7 +5,7 @@
 A collection of [Raku](https://www.raku.org) utilities to assist
 musical composition.
 
-# Versioning
+## Versioning
 
 Composition::Utils uses [Semantic Versioning](https://semver.org).
 
