@@ -1,0 +1,35 @@
+use Test;
+use Test::Selector;
+use Composition::Utils;
+
+sub test ($label, $title, $got, $expected) {
+    t $label => {
+        is($got, $expected, $title);
+    }
+}
+
+test('seq1',
+    'seq: zero start',
+    seq(0, 5, (3, 4)),
+    <0 3 7 10 14>,
+);
+
+test('seq2',
+    'seq: positive start',
+    seq(2, 5, (3, 4)),
+    <2 5 9 12 16>,
+);
+
+test('seq3',
+    'seq: negative start',
+    seq(-2, 5, (3, 4)),
+    <-2 1 5 8 12>,
+);
+
+test('seq4',
+    'seq: zero/positive/negative steps',
+    seq(0, 10, (0, 4, -10 )),
+    <0 0 4 -6 -6 -2 -12 -12 -8 -18>,
+);
+
+done-testing;
