@@ -1,5 +1,0 @@
-use Test;
-use Test::Selector;
-use Composition::Utils;
-
-done-testing;
