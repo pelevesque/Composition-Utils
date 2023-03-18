@@ -10,3 +10,7 @@ sub seq(Int $start, PosInt $length, @steps) is export {
     }
     return @seq;
 }
+
+sub trans($amount, @seq) is export {
+    @seq »+» $amount;
+}

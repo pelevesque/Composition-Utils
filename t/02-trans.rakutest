@@ -1,0 +1,29 @@
+use Test;
+use Test::Selector;
+use Composition::Utils;
+
+sub test ($label, $title, $got, $expected) {
+    t $label => {
+        is($got, $expected, $title);
+    }
+}
+
+test('trans1',
+    'trans: zero amount',
+    trans(0, (3, 4, 5)),
+    <3 4 5>,
+);
+
+test('trans2',
+    'trans: positive amount',
+    trans(2, (3, 4, 5)),
+    <5 6 7>,
+);
+
+test('trans3',
+    'trans: negative amount',
+    trans(-2, (3, 4, 5)),
+    <1 2 3>,
+);
+
+done-testing;
