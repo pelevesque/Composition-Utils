@@ -1,12 +1,7 @@
 use Test;
-use Test::Selector;
 use Composition::Utils;
-
-sub test ($label, $title, $got, $expected) {
-    t $label => {
-        is($got, $expected, $title);
-    }
-}
+use lib $?FILE.IO.dirname;
+use Common;
 
 test('seq1',
     'seq: zero start',
