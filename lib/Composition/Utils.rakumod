@@ -14,3 +14,8 @@ sub seq(Int $start, PosInt $length, @steps) is export {
 sub trans($amount, @seq) is export {
     @seq »+» $amount;
 }
+
+sub trans-to($to, @seq) is export {
+    my $amount = $to - @seq[0];
+    trans($amount, @seq);
+}
